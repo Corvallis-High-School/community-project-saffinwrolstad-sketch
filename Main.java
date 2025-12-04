@@ -16,8 +16,16 @@ class Main {
         game1.setLocation("Crystal Lake");
         game1.setTime("5:00pm");
         game1.toString();
-        game1.print();
+        game1.print(1);
+        game2.getSport();
+        game2.getLocation();
+        game2.getTime();
         game2.print();
+        game2.setSport("XC");
+        game2.setLocation("Crystal Lake");
+        game2.setTime("2:00pm");
+        game2.toString();
         game2.print(1);
+        // Everything above from Unit 3
   }
 }
