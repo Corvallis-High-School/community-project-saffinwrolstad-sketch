@@ -104,6 +104,16 @@ class TrackAndField extends Athletics
         super.Athletics();
         events = jevents;
     }
+
+    public int getEvents()
+    {
+        return events;
+    }
+
+    public void setEvents(int newEvents)
+    {
+        events = newEvents;
+    }
 }
 class CrossCountry extends Athletics 
 {
@@ -119,6 +129,16 @@ class CrossCountry extends Athletics
     {
         super.Athletics();
         races = jraces;
+    }
+
+    public int getRaces()
+    {
+        return races;
+    }
+
+    public void setRaces(int newRaces)
+    {
+        races = newRaces;
     }
 }
 class Football extends Athletics
@@ -136,6 +156,16 @@ class Football extends Athletics
         super.Athletics();
         teams = jteams;
     }
+
+    public String getTeams()
+    {
+        return teams;
+    }
+
+    public void setTeams(String newTeams)
+    {
+        teams = newTeams;
+    }
 }
 class Baseball extends Athletics
 {
@@ -151,5 +181,15 @@ class Baseball extends Athletics
     {
         super.Athletics();
         teams = jteams;
+    }
+
+    public int getTeams()
+    {
+        return teams;
+    }
+
+    public void setTeams(String newTeams)
+    {
+        teams = newTeams;
     }
 }
