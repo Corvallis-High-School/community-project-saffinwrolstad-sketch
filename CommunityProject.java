@@ -92,36 +92,64 @@ public class Athletics         // Add your class name here!
 class TrackAndField extends Athletics 
 {
     private int events;
+
     public TrackMeet()
     {
         super.Athletics();
         events = 0;
     }
+
+    public TrackMeet(int jevents)
+    {
+        super.Athletics();
+        events = jevents;
+    }
 }
 class CrossCountry extends Athletics 
 {
     private int races;
+
     public XCMeet()
     {
         super.Athletics();
         races = 0;
     }
+
+    public XCMeet(int jraces)
+    {
+        super.Athletics();
+        races = jraces;
+    }
 }
 class Football extends Athletics
 {
     private String teams;
+
     public FootballGame()
     {
         super.Athletics();
         teams = "Team A || Team B";
     }
+
+    public FootballGame(String jteams)
+    {
+        super.Athletics();
+        teams = jteams;
+    }
 }
 class Baseball extends Athletics
 {
     private String teams;
+
     public BaseballGame()
     {
         super.Athletics();
         teams = "Team A || Team B";
+    }
+
+    public BaseballGame(String jteams)
+    {
+        super.Athletics();
+        teams = jteams;
     }
 }
