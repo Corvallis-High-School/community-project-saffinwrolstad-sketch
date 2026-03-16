@@ -1,4 +1,4 @@
-class Athletics         // Add your class name here!
+public class Athletics         // Add your class name here!
 {
     // 1. write 3 instance variables for class: private type variableName;
     private String sport;
@@ -11,6 +11,13 @@ class Athletics         // Add your class name here!
         sport = jsport;
         location = jlocation;
         time = jtime;
+    }
+
+    public Athletics()
+    {
+        sport = "Sport";
+        location = "Location";
+        time = "Time";
     }
     
     // 3. Write a print() method that uses System.out.println to print out all the instance variables.
@@ -81,4 +88,40 @@ class Athletics         // Add your class name here!
         }
     }
 
+}
+class TrackAndField extends Athletics 
+{
+    private int events;
+    public TrackMeet()
+    {
+        super.Athletics();
+        events = 0;
+    }
+}
+class CrossCountry extends Athletics 
+{
+    private int races;
+    public XCMeet()
+    {
+        super.Athletics();
+        races = 0;
+    }
+}
+class Football extends Athletics
+{
+    private String teams;
+    public FootballGame()
+    {
+        super.Athletics();
+        teams = "Team A || Team B";
+    }
+}
+class Baseball extends Athletics
+{
+    private String teams;
+    public BaseballGame()
+    {
+        super.Athletics();
+        teams = "Team A || Team B";
+    }
 }
