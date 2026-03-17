@@ -1,0 +1,195 @@
+public class Athletics         // Add your class name here!
+{
+    // 1. write 3 instance variables for class: private type variableName;
+    private String sport;
+    private String location;
+    private String time;
+
+    // 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
+    public Athletics(String jsport, String jlocation, String jtime)
+    {
+        sport = jsport;
+        location = jlocation;
+        time = jtime;
+    }
+
+    public Athletics()
+    {
+        sport = "Sport";
+        location = "Location";
+        time = "Time";
+    }
+    
+    // 3. Write a print() method that uses System.out.println to print out all the instance variables.
+    public void print()
+    {
+        System.out.println("Sport: " + sport + ", Location: " + location + ", Time: " + time);
+    }
+
+    // 4. Create accessor (get) methods for each of the instance variables.
+    public String getSport()
+    {
+        return sport;
+    }
+    
+    public String getLocation()
+    {
+        return location;
+    }
+    
+    public String getTime()
+    {
+        return time;
+    }
+
+    // 5. Create mutator (set) methods for each of the instance variables.
+    public void setSport(String newSport)
+    {
+        sport = newSport;
+    }
+    
+    public void setLocation(String newLocation)
+    {
+        location = newLocation;
+    }
+    
+    public void setTime(String newTime)
+    {
+        time = newTime;
+    }
+
+
+
+    // 6. Create a toString() method that returns all the information in the instance variables.
+    public String toString()
+    {
+        return "Sport: " + sport + ", Location: " + location + ", Time: " + time;
+    }
+    
+    // 7. Write an additional method for your class that takes a parameter.
+    // For example, there could be a print method with arguments that indicate how you want to print out
+    // the information, e.g. print(format) could print the data according to an argument that is "plain"
+    // or "table" where the data is printed in a table drawn with dashes and lines (|).
+    public void print(int format)
+    {
+        if (format <= 0)
+        {
+            System.out.println("Sport: " + sport + ", Location: " + location + ", Time: " + time);
+        }
+        else if (format == 1)
+        {
+            System.out.println("|" + sport + "|" + location + "|" + time + "|");
+        }
+        else 
+        {
+            System.out.println(sport);
+            System.out.println(location);
+            System.out.println(time);
+        }
+    }
+
+}
+class TrackAndField extends Athletics 
+{
+    private int events;
+
+    public TrackMeet()
+    {
+        super.Athletics();
+        events = 0;
+    }
+
+    public TrackMeet(int jevents)
+    {
+        super.Athletics();
+        events = jevents;
+    }
+
+    public int getEvents()
+    {
+        return events;
+    }
+
+    public void setEvents(int newEvents)
+    {
+        events = newEvents;
+    }
+}
+class CrossCountry extends Athletics 
+{
+    private int races;
+
+    public XCMeet()
+    {
+        super.Athletics();
+        races = 0;
+    }
+
+    public XCMeet(int jraces)
+    {
+        super.Athletics();
+        races = jraces;
+    }
+
+    public int getRaces()
+    {
+        return races;
+    }
+
+    public void setRaces(int newRaces)
+    {
+        races = newRaces;
+    }
+}
+class Football extends Athletics
+{
+    private String teams;
+
+    public FootballGame()
+    {
+        super.Athletics();
+        teams = "Team A || Team B";
+    }
+
+    public FootballGame(String jteams)
+    {
+        super.Athletics();
+        teams = jteams;
+    }
+
+    public String getTeams()
+    {
+        return teams;
+    }
+
+    public void setTeams(String newTeams)
+    {
+        teams = newTeams;
+    }
+}
+class Baseball extends Athletics
+{
+    private String teams;
+
+    public BaseballGame()
+    {
+        super.Athletics();
+        teams = "Team A || Team B";
+    }
+
+    public BaseballGame(String jteams)
+    {
+        super.Athletics();
+        teams = jteams;
+    }
+
+    public int getTeams()
+    {
+        return teams;
+    }
+
+    public void setTeams(String newTeams)
+    {
+        teams = newTeams;
+    }
+}
