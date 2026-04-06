@@ -89,19 +89,22 @@ public class Athletics         // Add your class name here!
     }
 
 }
+
+// everything above is previous units everything below is unit 5
+
 class TrackAndField extends Athletics 
 {
     private int events;
 
-    public TrackMeet()
+    public TrackAndField()
     {
-        super.Athletics();
+        super();
         events = 0;
     }
-
-    public TrackMeet(int jevents)
+    
+    public TrackAndField(String sport, String loc, String time, int jevents)
     {
-        super.Athletics();
+        super(sport, loc, time);
         events = jevents;
     }
 
@@ -114,20 +117,32 @@ class TrackAndField extends Athletics
     {
         events = newEvents;
     }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", Number of Events: " + events;
+    }
+    
+    @Override
+    public void print()
+    {
+        System.out.println(toString());
+    }
 }
 class CrossCountry extends Athletics 
 {
     private int races;
 
-    public XCMeet()
+    public CrossCountry()
     {
-        super.Athletics();
+        super();
         races = 0;
     }
 
-    public XCMeet(int jraces)
+    public CrossCountry(String sport, String loc, String time, int jraces)
     {
-        super.Athletics();
+        super(sport, loc, time);
         races = jraces;
     }
 
@@ -140,20 +155,32 @@ class CrossCountry extends Athletics
     {
         races = newRaces;
     }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", Number of Races: " + races;
+    }
+    
+    @Override
+    public void print()
+    {
+        System.out.println(toString());
+    }
 }
 class Football extends Athletics
 {
     private String teams;
 
-    public FootballGame()
+    public Football()
     {
-        super.Athletics();
-        teams = "Team A || Team B";
+        super();
+        teams = "";
     }
 
-    public FootballGame(String jteams)
+    public Football(String sport, String loc, String time, String jteams)
     {
-        super.Athletics();
+        super(sport, loc, time);
         teams = jteams;
     }
 
@@ -166,24 +193,36 @@ class Football extends Athletics
     {
         teams = newTeams;
     }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", Teams: " + teams;
+    }
+    
+    @Override
+    public void print()
+    {
+        System.out.println(toString());
+    }
 }
 class Baseball extends Athletics
 {
     private String teams;
 
-    public BaseballGame()
+    public Baseball()
     {
-        super.Athletics();
-        teams = "Team A || Team B";
+        super();
+        teams = "";
     }
 
-    public BaseballGame(String jteams)
+    public Baseball(String sport, String loc, String time, String jteams)
     {
-        super.Athletics();
+        super(sport, loc, time);
         teams = jteams;
     }
 
-    public int getTeams()
+    public String getTeams()
     {
         return teams;
     }
@@ -191,5 +230,17 @@ class Baseball extends Athletics
     public void setTeams(String newTeams)
     {
         teams = newTeams;
+    }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + ", Teams: " + teams;
+    }
+    
+    @Override
+    public void print()
+    {
+        System.out.println(toString());
     }
 }
